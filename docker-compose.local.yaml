@@ -1,0 +1,21 @@
+version: "3"
+services:
+  studser:
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./studser:/server
+      - /server/node_modules
+    environment:
+      - PORT=8080
+      - NODE_ENV=development
+    env_file:
+      - ./studser/.env
+    command: yarn dev
+  # studfron:
+  #   build: ./studfron
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./studfron:/client
+  #     - /client/node_modules

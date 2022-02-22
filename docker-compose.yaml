@@ -1,0 +1,6 @@
+version: "3"
+services:
+  studser:
+    build: ./studser
+  # studfron:
+  #   build: ./studfron
